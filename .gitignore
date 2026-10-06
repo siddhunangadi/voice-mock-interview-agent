@@ -8,4 +8,6 @@ work/
 .playwright-mcp/
 node_modules/
 graphify-out/
+.astra/
+outputs/
 .DS_Store

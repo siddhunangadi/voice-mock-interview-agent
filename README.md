@@ -40,7 +40,7 @@ Browser endpoints use a same-site HttpOnly cookie and origin check. Provider end
 
 ## Testing
 
-Run `.venv/bin/python -m unittest discover -s tests -v`. The suite checks controller transitions, duplicate questions, follow-up limits, validation and unauthenticated provider access. Local integration requires configured Supabase, Gemini, Vapi and a public HTTPS callback. Review `.astra/VERIFICATION.md` for the latest live-test status before relying on a deployment.
+Run `.venv/bin/python -m unittest discover -s tests -v`. The suite checks controller transitions, duplicate questions, follow-up limits, validation and unauthenticated provider access. Local integration requires configured Supabase, Gemini, Vapi and a public HTTPS callback.
 
 ## Design limits
 
