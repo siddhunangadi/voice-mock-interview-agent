@@ -13,7 +13,7 @@ The interview uses your own background and the job description to choose what to
 ## How it works
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["Add your resume<br/>and job description"] --> B["Get a personal<br/>interview plan"]
     B --> C["Speak with the<br/>AI interviewer"]
     C --> D["Review feedback<br/>and next steps"]
