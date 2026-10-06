@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+work/
+.playwright-mcp/
+node_modules/
+graphify-out/
+.DS_Store

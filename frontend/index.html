@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mock Interview</title>
+  <link rel="stylesheet" href="/static/style.css?v=resume-upload-1">
+</head>
+<body>
+  <nav class="site-bar" aria-label="Application">
+    <div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#305c49"/><path d="M9 14v4m5-9v14m5-11v8m5-6v4" stroke="#eaf0df" stroke-width="2.5" stroke-linecap="round"/></svg>Mock Interview</div>
+    <span class="bar-note">A little practice. A better conversation.</span>
+  </nav>
+  <main>
+    <header>
+      <h1>Your next interview.<br><em>A little more prepared.</em></h1>
+      <p class="intro">Practice out loud with an AI interviewer that gets to know your experience and the role. Find your words here, before it counts.</p>
+    </header>
+
+    <section id="setup" aria-labelledby="setup-title">
+      <div class="section-heading"><h2 id="setup-title">Make it your interview</h2><p>Two things to help us get to know you.</p></div>
+      <form id="interview-form">
+        <div class="form-grid">
+          <div class="field">
+            <div class="field-heading"><label for="job-description">The role you want</label><span>JOB DESCRIPTION</span></div>
+            <p>What will you be working on?</p>
+            <textarea id="job-description" name="job_description" minlength="30" maxlength="20000" required placeholder="Paste the job description here, including responsibilities and required skills."></textarea>
+          </div>
+          <div class="field">
+            <div class="field-heading"><label for="resume">The experience you bring</label><span>RESUME</span></div>
+            <p>Upload your resume or paste its text below.</p>
+            <label class="upload-label" for="resume-file">Upload PDF or DOCX <span>· up to 5 MB</span></label>
+            <input id="resume-file" type="file" accept=".pdf,.docx" aria-describedby="upload-status">
+            <p id="upload-status" role="status">Extracted text will appear below for you to review.</p>
+            <textarea id="resume" name="resume" minlength="30" maxlength="20000" required placeholder="Paste your resume here, including experience, projects, education and skills."></textarea>
+          </div>
+        </div>
+        <div class="form-footer"><p class="hint">Your microphone stays off until you start voice. You’ll have a moment to get ready.</p><button type="submit" id="prepare">Prepare interview</button></div>
+      </form>
+    </section>
+    <ol class="steps" aria-label="How it works"><li><span>1</span>Add your details</li><li><span>2</span>Have a conversation</li><li><span>3</span>Get personal feedback</li></ol>
+
+    <section id="interview" hidden aria-labelledby="interview-title">
+      <div class="section-top"><h2 id="interview-title">Your practice room</h2><span id="status" role="status">Ready</span></div>
+      <div class="session-body"><div class="voice-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <p id="progress" class="hint"></p>
+
+      <p id="question" class="question"></p>
+      <p id="session-note" class="hint">Allow microphone access when your browser asks. Speak naturally after the interviewer finishes.</p>
+      <div class="actions">
+        <button id="start-voice">Start voice</button>
+        <button id="edit-details" class="secondary">Change details</button>
+        <button id="end-voice" class="secondary" hidden>Finish interview</button>
+      </div>
+      </div><div class="session-bottom"><p id="interview-plan" class="hint"></p><details><summary>Conversation so far</summary><ol id="transcript"></ol></details></div>
+    </section>
+
+    <section id="results" hidden aria-labelledby="results-title">
+      <h2 id="results-title">A moment to reflect.</h2>
+      <p id="summary"></p>
+      <p id="score"></p>
+      <div class="feedback-grid"><div><h3>What worked well</h3><ul id="strengths"></ul></div>
+      <div><h3>Where to grow</h3><ul id="improvements"></ul></div></div>
+      <h3>Topic feedback</h3><div id="topics"></div>
+      <h3 class="next-heading">Put it into practice</h3><ul id="recommendations"></ul>
+      <button id="new-interview" class="secondary">New interview</button>
+    </section>
+    <p id="error" role="alert" hidden></p>
+    <footer><span>Practice with purpose.</span><span>Resume-led questions. Real conversation.</span></footer>
+  </main>
+  <script type="module" src="/static/app.js?v=turn-timing-1"></script>
+</body>
+</html>
